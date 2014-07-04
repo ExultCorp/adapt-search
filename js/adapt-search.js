@@ -150,4 +150,10 @@ define(function(require){
 
     }
 
+    var results = function () {
+        return contentMatches;
+    };
+
+    return { search: search, results: results };
+
 });
