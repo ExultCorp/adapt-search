@@ -10,7 +10,7 @@ adaptTester.prototype.initialise = function (options, callback){
 adaptTester.prototype.loadAdapt = function () {
     //require adapt, modernizr, test spec sheet, expect and mocha
     var require = {
-        baseUrl: this.base,
+        baseUrl: this.base, // + "adapt/js",
         paths: {
             adapt: 'adapt/js/adapt.min.js',
             spec: this.testbase+'spec',

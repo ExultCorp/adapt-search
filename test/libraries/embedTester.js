@@ -24,6 +24,12 @@ embedTester.prototype.initialise = function (options, callback) {
 	this.base = url; //build folder
 	this.testbase = testbase; //test base folder
 
+	var embedTesterHandle = this;
+	for(var i = 0; i < this.options.units.length; i++) {
+		item = this.options.units[i];
+		item.url = embedTesterHandle.testbase + item.url;
+	};
+
 	if (typeof callback == "function") callback.call(this);
 };
 
